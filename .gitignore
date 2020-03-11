@@ -10,18 +10,17 @@
 Thumbs.db
 .Trashes
 
-# Packages folders
-node_modules
-vendor
-
 # Folders to ignore
 logs
 
 # Ignore the wp directory
 htdocs/wp/
 
-# Ignore the wp-content directory
-htdocs/wp-content
+# Ignore the content of wp-content directory
+htdocs/wp-content/*
+
+# Ignore the vendor repository
+htdocs/wp-content/vendor
 
 # Don’t ignore themes dir, but ignore everything inside
 !htdocs/wp-content/themes

@@ -21,6 +21,7 @@ Copy and rename wp-config-sample.php to wp-config.php.
 
 Replace:
 
+-   Path to Composer autoload if different
 -   "database_name_here"
 -   "username_here"
 -   "password_here"
@@ -30,7 +31,6 @@ Replace:
 -   "WP_SITEURL" value with your URL to core directory (/wp/ by default)
 -   "WP_HOME" value with your URL
 -   uncomment "FORCE_SSL_ADMIN" (if needed)
--   change "/wp/" in "define ( 'ABSPATH' [...]" if you have changed the core directory URL.
 
 Open a terminal, then:
 

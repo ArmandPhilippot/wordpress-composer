@@ -12,7 +12,7 @@
   ],
   "type": "project",
   "require": {
-    "wordpress/wordpress": "5.3.2",
+    "wordpress/wordpress": "5.5.1",
     "koodimonni-language/core-fr_fr": "*",
     "wpackagist-theme/twentytwenty": "*",
     "wpackagist-plugin/akismet": "dev-trunk"
@@ -27,11 +27,11 @@
       "package": {
         "name": "wordpress/wordpress",
         "type": "webroot",
-        "version": "5.3.2",
+        "version": "5.5.1",
         "source": {
           "url": "https://github.com/WordPress/WordPress.git",
           "type": "git",
-          "reference": "5.3.2"
+          "reference": "5.5.1"
         },
         "require": {
           "fancyguy/webroot-installer": "^1.0.0"

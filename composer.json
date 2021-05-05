@@ -1,7 +1,6 @@
 {
   "name": "armandphilippot/wordpress-composer",
   "description": "WordPress installation using Composer.",
-  "version": "1.0.0",
   "license": "GPL-2.0-or-later",
   "authors": [
     {
@@ -12,26 +11,31 @@
   ],
   "type": "project",
   "require": {
-    "wordpress/wordpress": "5.5.1",
+    "composer/installers": "^1.10",
+    "wordpress/wordpress": "5.7.1",
     "koodimonni-language/core-fr_fr": "*",
     "wpackagist-theme/twentytwenty": "*",
-    "wpackagist-plugin/akismet": "dev-trunk"
+    "wpackagist-plugin/akismet": "^4.1.5"
   },
   "repositories": [
     {
       "type": "composer",
-      "url": "https://wpackagist.org"
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
     },
     {
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
         "type": "webroot",
-        "version": "5.5.1",
+        "version": "5.7.1",
         "source": {
           "url": "https://github.com/WordPress/WordPress.git",
           "type": "git",
-          "reference": "5.5.1"
+          "reference": "5.7.1"
         },
         "require": {
           "fancyguy/webroot-installer": "^1.0.0"

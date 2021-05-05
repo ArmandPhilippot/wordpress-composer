@@ -17,7 +17,7 @@
  * @see https://codex.wordpress.org/Editing_wp-config.php
  */
 
-// Composer autoloader
+// Composer autoloader.
 require __DIR__ . '/wp-content/vendor/autoload.php';
 
 
@@ -35,7 +35,7 @@ define( 'DB_PASSWORD', 'password_here' );
 define( 'DB_HOST', 'localhost' );
 
 // Database Charset to use in creating database tables.
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 // The Database Collate type. Don't change this if in doubt.
 define( 'DB_COLLATE', '' );
@@ -98,7 +98,7 @@ define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 // Sets the plugins location, related to what's defined on composer.json file.
 define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
 define( 'WP_PLUGIN_URL', WP_CONTENT_URL . '/plugins' );
-// Disables the embebeded editor.
+// Disables the embedded editor.
 define( 'DISALLOW_FILE_EDIT', true );
 define( 'DISALLOW_FILE_MODS', true );
 define( 'RELOCATE', true );
@@ -116,7 +116,7 @@ define( 'FORCE_SSL_ADMIN', true );
 
 // Absolute path to the WordPress directory.
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+	define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
 }
 
 /** Sets up WordPress vars and included files. */

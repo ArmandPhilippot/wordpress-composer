@@ -13,7 +13,7 @@
   "require": {
     "composer/installers": "^1.10",
     "wordpress/wordpress": "5.7.1",
-    "koodimonni-language/core-fr_fr": "*",
+    "inpsyde/wp-translation-downloader": "^2.0",
     "wpackagist-theme/twentytwenty": "*",
     "wpackagist-plugin/akismet": "^4.1.5"
   },
@@ -65,16 +65,11 @@
     "webroot-dir": "htdocs/wp",
     "webroot-package": "wordpress/wordpress",
     "wordpress-install-dir": "htdocs/wp",
-    "dropin-paths": {
-      "htdocs/wp-content/languages/": [
-        "vendor:koodimonni-language"
+    "wp-translation-downloader": {
+      "languages": [
+        "fr_FR"
       ],
-      "htdocs/wp-content/languages/plugins/": [
-        "vendor:koodimonni-plugin-language"
-      ],
-      "htdocs/wp-content/languages/themes/": [
-        "vendor:koodimonni-theme-language"
-      ]
+      "directory": "htdocs/wp-content/languages"
     }
   }
 }

@@ -1,41 +1,33 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.log
-*.vi
-*~
-
-# OS or Editor folders
-.DS_Store
-Thumbs.db
-.Trashes
-
-# Folders to ignore
-logs
-node_modules
+# Ignore dependencies
+**/node_modules/
+**/vendor/
 
 # Ignore the wp directory
 htdocs/wp/
 
-# Ignore the content of wp-content directory
+# Do not ignore wp-content directory but ignore its content
+!htdocs/wp-content/
 htdocs/wp-content/*
 
-# Ignore the vendor repository
-htdocs/wp-content/vendor
-
-# Don’t ignore themes dir, but ignore everything inside
+# Do not ignore themes directory but ignore its content
 !htdocs/wp-content/themes
 htdocs/wp-content/themes/*
 
-# Don’t ignore this themes
-!htdocs/wp-content/themes/twentytwenty
+# Do not ignore this theme
+!htdocs/wp-content/themes/your-custom-theme
 
-# Don’t ignore plugins dir, but ignore everything inside
+# Do not ignore plugins directory but ignore its content
 !htdocs/wp-content/plugins
 htdocs/wp-content/plugins/*
 
-# Don’t ignore this plugins
-!htdocs/wp-content/plugins/akismet
+# Do not ignore these plugins
+!htdocs/wp-content/plugins/your-custom-plugin1
+!htdocs/wp-content/plugins/your-custom-plugin2
 
-# Don’t ignore mu-plugins dir
+# Do not ignore mu-plugins directory but ignore its content
 !htdocs/wp-content/mu-plugins
+!htdocs/wp-content/mu-plugins/*
+
+# Do not ignore these mu-plugins
+!htdocs/wp-content/mu-plugins/your-custom-mu-plugin1.php
+!htdocs/wp-content/mu-plugins/your-custom-mu-plugin2.php

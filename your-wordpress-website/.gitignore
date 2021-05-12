@@ -1,0 +1,41 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.vi
+*~
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.Trashes
+
+# Folders to ignore
+logs
+node_modules
+
+# Ignore the wp directory
+htdocs/wp/
+
+# Ignore the content of wp-content directory
+htdocs/wp-content/*
+
+# Ignore the vendor repository
+htdocs/wp-content/vendor
+
+# Don’t ignore themes dir, but ignore everything inside
+!htdocs/wp-content/themes
+htdocs/wp-content/themes/*
+
+# Don’t ignore this themes
+!htdocs/wp-content/themes/twentytwenty
+
+# Don’t ignore plugins dir, but ignore everything inside
+!htdocs/wp-content/plugins
+htdocs/wp-content/plugins/*
+
+# Don’t ignore this plugins
+!htdocs/wp-content/plugins/akismet
+
+# Don’t ignore mu-plugins dir
+!htdocs/wp-content/mu-plugins

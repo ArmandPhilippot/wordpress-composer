@@ -1,0 +1,32 @@
+{
+  "name": "wordpress-composer",
+  "description": "WordPress installation using Composer.",
+  "keywords": [
+    "WordPress",
+    "Composer"
+  ],
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "author": {
+    "name": "Armand Philippot",
+    "email": "contact@armandphilippot.com",
+    "url": "https://www.armandphilippot.com/"
+  },
+  "homepage": "https://github.com/ArmandPhilippot/wordpress-composer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmandPhilippot/wordpress-composer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmandPhilippot/wordpress-composer/issues"
+  },
+  "scripts": {
+    "release": "standard-version -a"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.3",
+    "@commitlint/config-conventional": "^12.1.3",
+    "husky": "^6.0.0",
+    "standard-version": "^9.3.0"
+  }
+}

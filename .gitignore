@@ -12,6 +12,7 @@ Thumbs.db
 
 # Folders to ignore
 logs
+node_modules
 
 # Ignore the wp directory
 htdocs/wp/

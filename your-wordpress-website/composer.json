@@ -1,75 +1,77 @@
 {
-  "name": "armandphilippot/wordpress-composer",
-  "description": "WordPress installation using Composer.",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Armand Philippot",
-      "email": "contact@armandphilippot.com",
-      "homepage": "https://www.armandphilippot.com/"
-    }
-  ],
-  "type": "project",
-  "require": {
-    "composer/installers": "^1.10",
-    "wordpress/wordpress": "5.7.1",
-    "inpsyde/wp-translation-downloader": "^2.0",
-    "wpackagist-theme/twentytwenty": "*",
-    "wpackagist-plugin/akismet": "^4.1.5"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": [
-        "wpackagist-plugin/*",
-        "wpackagist-theme/*"
-      ]
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "wordpress/wordpress",
-        "type": "webroot",
-        "version": "5.7.1",
-        "source": {
-          "url": "https://github.com/WordPress/WordPress.git",
-          "type": "git",
-          "reference": "5.7.1"
-        },
-        "require": {
-          "fancyguy/webroot-installer": "^1.0.0"
-        }
-      }
-    },
-    {
-      "type": "composer",
-      "url": "https://wp-languages.github.io"
-    }
-  ],
-  "config": {
-    "vendor-dir": "htdocs/wp-content/vendor"
-  },
-  "extra": {
-    "installer-paths": {
-      "htdocs/wp-content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "htdocs/wp-content/themes/{$name}/": [
-        "type:wordpress-theme"
-      ],
-      "htdocs/content/mu-plugins/{$name}/": [
-        "type:wordpress-muplugin"
-      ]
-    },
-    "webroot-dir": "htdocs/wp",
-    "webroot-package": "wordpress/wordpress",
-    "wordpress-install-dir": "htdocs/wp",
+	"name": "armandphilippot/wordpress-composer",
+	"description": "Install WordPress with custom paths using Composer.",
+	"keywords": ["WordPress"],
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Armand Philippot",
+			"email": "contact@armandphilippot.com",
+			"homepage": "https://www.armandphilippot.com/"
+		}
+	],
+	"type": "project",
+	"homepage": "https://github.com/ArmandPhilippot/wordpress-composer#readme",
+	"support": {
+		"docs": "https://github.com/ArmandPhilippot/wordpress-composer#readme",
+		"issues": "https://github.com/ArmandPhilippot/wordpress-composer/issues",
+		"source": "https://github.com/ArmandPhilippot/wordpress-composer"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+			]
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "wordpress/wordpress",
+				"type": "wordpress-core",
+				"version": "5.7.1",
+				"source": {
+					"url": "https://github.com/WordPress/WordPress.git",
+					"type": "git",
+					"reference": "5.7.1"
+				}
+			}
+		}
+	],
+	"require": {
+		"composer/installers": "^1.10",
+		"wordpress/wordpress": "5.7.1",
+		"wpackagist-theme/twentytwenty": "*",
+		"wpackagist-plugin/akismet": "^4.1.5",
+		"oomphinc/composer-installers-extender": "^2.0",
+    "inpsyde/wp-translation-downloader": "^2.0"
+	},
+	"config": {
+		"vendor-dir": "htdocs/wp-content/vendor"
+	},
+	"extra": {
+		"installer-types": ["wordpress-core"],
+		"installer-paths": {
+			"htdocs/wp/": [
+				"type:wordpress-core"
+			],
+			"htdocs/content/mu-plugins/{$name}/": [
+				"type:wordpress-muplugin"
+			],
+			"htdocs/wp-content/plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"htdocs/wp-content/themes/{$name}/": [
+				"type:wordpress-theme"
+			]
+		},
     "wp-translation-downloader": {
-      "languages": [
-        "fr_FR"
-      ],
-      "directory": "htdocs/wp-content/languages"
-    }
-  }
+			"languages": [
+				"fr_FR"
+			],
+			"directory": "htdocs/wp-content/languages"
+		}
+	}
 }

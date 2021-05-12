@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.0.0 (2021-05-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* replace `fancy/webroot-installer` with
+`oomphinc/composer-installers-extender`
+
+### Bug Fixes
+
+* change the way to install WordPress core ([9594aff](https://github.com/ArmandPhilippot/wordpress-composer/commit/9594aff8d1e863b697ad5c9288f2ee836692ce05))
+
 ## 1.0.0 (2021-05-12)
 
 

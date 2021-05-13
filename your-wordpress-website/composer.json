@@ -57,7 +57,7 @@
 			"htdocs/wp/": [
 				"type:wordpress-core"
 			],
-			"htdocs/content/mu-plugins/{$name}/": [
+			"htdocs/wp-content/mu-plugins/{$name}/": [
 				"type:wordpress-muplugin"
 			],
 			"htdocs/wp-content/plugins/{$name}/": [
